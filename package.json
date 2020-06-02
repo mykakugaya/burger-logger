@@ -1,7 +1,7 @@
 {
   "name": "burger-logger",
   "version": "1.0.0",
-  "description": "",
+  "description": "restaurant app that lets users input the names of burgers and devour them",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,10 +12,18 @@
     "url": "git+https://github.com/mykakugaya/burger-logger.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Myka Kugaya",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mykakugaya/burger-logger/issues"
   },
-  "homepage": "https://github.com/mykakugaya/burger-logger#readme"
+  "homepage": "https://github.com/mykakugaya/burger-logger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0"
+  }
 }

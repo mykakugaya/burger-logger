@@ -30,7 +30,7 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 430px;
+    min-height: 410px;
     position: relative;
     display: flex;    
     margin: 0 !important;
@@ -82,4 +82,5 @@ button:hover {
     .burgerImg {
         min-height: 300px;
     }
+    
 }

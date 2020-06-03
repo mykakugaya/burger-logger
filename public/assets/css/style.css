@@ -47,6 +47,14 @@ h4 {
     font-family: 'Anton', sans-serif;
 }
 
+.noMargin {
+    margin-bottom: 0 !important;
+}
+
+.noPadding {
+    padding: 0px !important;
+}
+
 li {
     padding: 5px !important;
     margin: 5px;
@@ -61,9 +69,13 @@ li {
     font-weight: bold;
 }
   
-.create-form {
-    padding: 5px;
-    margin: 5px;
+.form {
+    padding: 10px !important;
+    margin-top: 0 !important;
+}
+
+button:hover {
+    background-color: rgb(233, 52, 52) !important;
 }
 
 @media screen and (max-width: 768px) {

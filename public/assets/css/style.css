@@ -23,10 +23,12 @@ main {
 
 h1 {
     font-family: 'Pacifico', cursive;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
 }
 
 .burgerImg {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("../images/burgers.jpg");
+    background-image: url("../images/burgers.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,5 +84,5 @@ button:hover {
     .burgerImg {
         min-height: 300px;
     }
-    
+
 }

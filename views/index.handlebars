@@ -1,38 +1,58 @@
-<h1>Burgers!</h1>
+<div class="container amber lighten-5">
+    <div class="row white-text red darken-4 header">
+        <h1 class="col s12 center-align"><i class="fas fa-hamburger"></i> Eat-Da-Burger <i class="fas fa-hamburger"></i></h1>
+    </div>
+    <div class="row burgerImg">
+    </div>
+    <div class="row">
+        <div class="col s12 m6">
+            <h4 class="white-text red darken-4"><i class="material-icons">restaurant</i> Burgers to devour:</h4>
+            <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/unless}}
+            {{/each}}
+            </ul>
+        </div>
+        <div class="col s12 m6">
+            <h4 class="white-text red darken-4"><i class="material-icons">done_all</i> Burgers you've devoured:</h4>
+            <ul>
+            {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/if}}
+            {{/each}}
+            </ul>
+        </div>
+    </div>
 
-<h2>Burgers you can devour!</h2>
+    <div class="row">
+        <form class="col s12 create-form">
+            <h4 class="white-text red darken-4"><i class="material-icons">add_box</i> Add a burger!</h4>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input placeholder="ex. Hamburger..." id="ca" type="text" class="validate black-text" name="name">
+                    <label class="black-text" for="ca">Burger Name: </label>
+                    <p>
+                        <label class="black-text" for="devoured">Devoured?</label><br>
+                        <label>
+                            <input class="with-gap" name="devoured" value="1" type="radio" checked />
+                            <span class="black-text">Devoured</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="devoured" value="0" type="radio" />
+                            <span class="black-text">Not devoured yet</span>
+                        </label>
+                    </p>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that have been devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not devoured yet!
-  </div>
-
-  <button type="submit">Add burger</button>
-</form>
+                    <button class="btn waves-effect waves-light red darken-4" type="submit" name="action">Add burger 
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

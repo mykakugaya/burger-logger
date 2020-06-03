@@ -1,0 +1,10 @@
+<li class="col s12 amber lighten-3">
+	<i class="fas fa-hamburger"></i>
+	{{name}}
+	
+	<button class="right delete-burger waves-effect waves-light btn-small red darken-4" data-id="{{this.id}}">DELETE</button>
+	<button class="right change-devoured waves-effect waves-light btn-small red darken-4" data-id="{{id}}" data-newdevoured="{{devoured}}">
+		{{#if devoured}}UNDO!{{else}}EAT ME!{{/if}}
+	</button>
+
+</li>
